@@ -1,0 +1,13 @@
+@import '../../constants/theme/Main.module.scss';
+
+.history {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+
+    .transactionsContainer {
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
+    }
+}

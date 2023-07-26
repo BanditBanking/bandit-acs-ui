@@ -1,0 +1,52 @@
+@import '../../../constants/theme/Main.module.scss';
+
+.transaction {
+    width: calc(100% - 50px);
+    background-color: $bg1;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    overflow-y: hidden;
+
+    span {
+        white-space: nowrap;
+        margin: 0 5px;
+        overflow: hidden;
+    }
+
+    .merchantName {
+        width: 140px;
+    }
+
+    .status {
+        display: flex;
+        align-items: center;
+        width: 100px;
+        justify-content: flex-end;
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 4px;
+            margin-right: 5px;
+
+            &.success {
+                background-color: $success;
+            }
+
+            &.warn {
+                background-color: $warn;
+            }
+
+            &.error {
+                background-color: $error;
+            }
+
+            &.unknown {
+                color: $unknown
+            }
+        }
+    }
+}

@@ -1,0 +1,58 @@
+@import '../../../constants/theme/Main.module.scss';
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .popupFrame {
+        margin: 20px;
+        max-height: 500px;
+        overflow-y: auto;
+        background-color: $bg0;
+        color: $contrast;
+        box-shadow: 0 0 8px 4px rgb(0 0 0 / 30%);
+        animation: scale-up-center 0.1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+        border-radius: 10px;
+
+        .topControls {
+            width: 100%;
+            display: flex;
+            justify-content: right;
+
+            .closeIcon {
+                cursor: pointer;
+            }
+
+        }
+
+        .popupMainContent {
+            h1 {
+                text-align: center;
+            }
+
+            .registerBanner {
+                margin-top: 20px;
+
+                p {
+                    text-align: center;
+
+                    span {
+                        color: var(--primary);
+                        cursor: pointer;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,57 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+node_modules
+
+# testing
+coverage
+qa/bin
+qa/build
+qa/lib
+qa/.gradle/
+qa/.idea
+qa/.classpath
+qa/.project
+qa/debug.log
+.gradle/
+
+# production
+build
+dist
+lib
+dll
+public/dist
+public/main.prod.js
+public/main.prod.js.map
+public/frontend_config.js
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+debug.log
+
+test-report.xml
+
+# IDE
+.idea
+*.iml
+.sonar
+.vscode/*
+
+# Yalc
+.yalc/
+yalc.*
+
+npm_dependencies
+
+.webpack/
+out/
+certs/tristesse.crt
+certs/tristesse.key

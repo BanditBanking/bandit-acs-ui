@@ -1,0 +1,18 @@
+version: "3.9"
+services:
+  dev-portal:
+    build: .
+    ports:
+      - 3000:443
+    environment:
+      - REACT_APP_BANK_ID=dev-bank
+      - REACT_APP_DASHBOARD_TITLE=Dev Portal
+      - REACT_APP_DASHBOARD_COLOR=#9631E9
+      - REACT_APP_ACS_API_URL=https://donsaluste-acs.tristesse.lol
+      - NODE_ENV=production
+      - PORT=443
+      - HTTPS=true
+      - SSL_CERT_PATH=/certs/tristesse.crt
+      - SSL_KEY_PATH=/certs/tristesse.key
+    volumes:
+      - /certs/:/certs/

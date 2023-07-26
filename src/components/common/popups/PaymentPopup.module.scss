@@ -1,0 +1,75 @@
+@import '../../../constants/theme/Main.module.scss';
+
+.main {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    min-width: 250px;
+
+    h1 {
+        margin: 0 0 20px 0;
+    }
+
+    .infoSection {
+        width: 100%;
+
+        .card {
+            background-color: $bg1;
+            border-radius: 5px;
+            height: calc(100% - 60px);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+
+            .amount {
+                flex: 1 1 auto;
+
+                label {
+                    margin: 0 0 10px 0;
+                }
+
+                .price {
+                    span {
+                        font-size: 32px;
+                        font-weight: 700;
+                    }
+
+                    .decimals {
+                        font-size: 20px;
+                        font-weight: 500;
+                    }
+                }
+            }
+
+            .beneficiaryDetails {
+                .detailSection {
+                    margin-top: 15px;
+                }
+
+                p {
+                    font-size: 13px;
+                    font-weight: 700;
+                    margin: 8px 0;
+                }
+            }
+        }
+    }
+
+    .btn {
+        margin-top: 20px;
+    }
+
+    .balance {
+        margin-top: 20px;
+        background-color: $bg1;
+        border-radius: 5px;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+
+        .balanceAmount {
+            margin: 0
+        }
+    }
+}

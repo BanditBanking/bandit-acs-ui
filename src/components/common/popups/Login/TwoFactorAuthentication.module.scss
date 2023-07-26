@@ -1,0 +1,45 @@
+@import '../../../../constants/theme/Main.module.scss';
+
+.main {
+    h1 {
+        margin-bottom: 40px;
+    }
+
+    label {
+        margin-bottom: 20px;
+        display: block;
+        font-weight: 500;
+        font-size: 18px;
+    }
+
+    .methodSelection {
+        margin-bottom: 20px;
+
+        .procedures {
+            display: flex;
+            align-items: center;
+            margin: 0 -10px;
+
+            .procedure {
+                display: flex;
+                background-color: $bg1;
+                flex: 1 1 auto;
+                height: 50px;
+                align-items: center;
+                justify-content: center;
+                margin: 10px;
+                border-radius: 10px;
+                cursor: pointer;
+
+                &.selected {
+                    background-color: var(--primary);
+                    box-shadow: 0 0 10px var(--primary);
+
+                    span {
+                        color: $bg0
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,178 @@
+@import '../../../constants/theme/Main.module.scss';
+
+.sidebar {
+    position: fixed;
+    height: 100%;
+    width: 280px;
+    background-color: $nav;
+    transition: all 0.5s ease;
+
+    .logoDetails {
+        height: 80px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        .logoName {
+            font-size: 18px;
+            font-weight: 500;
+            color: white;
+            white-space: nowrap;
+        }
+    }
+
+    .linkSection {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: calc(100% - 80px);
+
+        .navLinks {
+            margin: 0;
+            padding: 0;
+
+            li {
+                height: 60px;
+                width: 100%;
+                list-style: none;
+
+                a {
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    text-decoration: none;
+                    transition: all 0.4s ease;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: $bg0;
+                        background-color: var(--primary);
+                    }
+
+                    .linkName {
+                        color: $navContrast;
+                        font-size: 1.2em;
+                        font-weight: 400;
+                        white-space: nowrap;
+                    }
+                }
+
+                &.selected {
+                    background-color: var(--primary);
+                }
+            }
+        }
+    }
+
+    .icon {
+        min-width: 80px;
+        text-align: center;
+        color: $navContrast;
+        font-size: 1.2em;
+    }
+
+    &.collapsed {
+        width: 80px;
+
+        ~.mainSection {
+            width: calc(100% - 80px);
+            left: 80px;
+        }
+    }
+}
+
+.mainSection {
+    background-color: $bg0;
+    position: relative;
+    width: calc(100% - 280px);
+    left: 280px;
+    transition: all 0.5s ease;
+    min-height: 100vh;
+    overflow: hidden;
+
+    nav {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        color: $contrast;
+        justify-content: space-between;
+        background-color: $bg0;
+
+        .sidebarButton {
+            display: flex;
+            align-items: center;
+            font-size: 1.4em;
+            font-weight: 400;
+            padding: 30px;
+
+            div {
+                cursor: pointer;
+            }
+        }
+
+        .pageTitle {
+            margin-left: 20px;
+        }
+
+        .username {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            height: 80px;
+            color: $contrast;
+            text-decoration: none;
+
+            p {
+                margin-left: 10px;
+            }
+
+            .userIcon {
+                min-width: 0;
+            }
+        }
+
+        .profileDetails {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            height: 80px;
+
+            .loginBtn {
+                font-weight: 500;
+                font-size: 1.2rem;
+                color: $contrast;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .mainContent {
+        width: 100%;
+        height: calc(100vh - 80px);
+        background-color: $bg0;
+        min-width: 350px;
+
+        .authRequired {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100%;
+
+            h2,
+            p {
+                text-align: center;
+            }
+
+            .actions {
+                margin-top: 30px;
+
+                .loginBtn {
+                    width: 300px;
+                }
+            }
+        }
+    }
+}

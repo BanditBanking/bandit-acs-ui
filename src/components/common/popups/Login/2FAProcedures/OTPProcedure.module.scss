@@ -1,0 +1,32 @@
+.challengeCode {
+    width: 100%;
+    text-align: center;
+    display: block;
+    font-weight: 700;
+    font-size: 26px;
+}
+
+.otpContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .otpImage {
+        width: 300px;
+    }
+}
+
+.responseContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0px;
+
+    .responseField {
+        width: 200px;
+        margin: 0 0 30px 0 !important;
+    }
+}
+
+.completeBtn {
+    margin-bottom: 10px;
+}

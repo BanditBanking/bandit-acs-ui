@@ -1,0 +1,54 @@
+@import '../../../constants/theme/Main.module.scss';
+
+.field {
+    margin-top: 20px;
+}
+
+.textInput {
+    label {
+        font-weight: 400;
+        display: block;
+    }
+
+    input {
+        outline: none;
+        border: 0;
+        border-radius: 5px;
+        background-color: $bg1;
+        padding: 10px;
+        color: $contrast;
+        margin-top: 5px;
+        width: calc(100% - 1.5em)
+    }
+
+    .error {
+        color: $error;
+        margin-left: 5px
+    }
+}
+
+.errorText {
+    color: $error;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.formButton {
+    background-color: var(--primary);
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 0.75rem;
+    color: $contrast;
+    font-weight: 700;
+    font-size: 1em;
+    color: $bg0;
+    width: 100%;
+
+    &:hover {
+        transition: all 0.2s ease;
+        box-shadow: 0 0 10px var(--primary);
+    }
+}
